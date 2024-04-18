@@ -48,9 +48,9 @@ module DMM
 
     def connection
       @connection ||= Faraday.new(faraday_options) do |faraday|
-        faraday.adapter  Faraday.default_adapter
         faraday.request  :url_encoded
         faraday.response :json
+        faraday.adapter  Faraday.default_adapter
       end
     end
 
